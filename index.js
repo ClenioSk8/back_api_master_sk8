@@ -5,6 +5,9 @@ const servidor = express();
 servidor.use(express.json());
 servidor.use(cors()); // PARA CONSEGUIR UTILIZAR A API 'LOCALHOST' NO CLIENTE
 
+const port =process.env.PORT || 3001;
+
+
 const rotas = require("./config/rotas"); // REQUERENDO AS ROTAS
 servidor.use(rotas); // RECEBENDO AS ROTAS NO SERVIDOR
 
